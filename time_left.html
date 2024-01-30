@@ -41,7 +41,7 @@
     
     <div id="counter">
     <h2>
-        Time left in This Month
+        Tempo rimanente alla sessione
     </h2>
     
         <h2 class="box" id="days"></h2>
@@ -60,13 +60,12 @@
     }
     function showRemaining (){
     now = new Date();
-    days_in_this_month = new Date("Feb 28, 2024 15:37:25").getTime();
-    days = days_in_this_month- now.getDate();
-    hours = 23 - now.getHours();
-    minutes = 59 - now.getMinutes();
-    left_days.innerHTML = days + " days "
-    left_hours.innerHTML = hours + " hours "
-    left_minutes.innerHTML = minutes + " mins "
+    // Imposta la data obiettivo (esempio: 1 febbraio 2024 alle 12:00:00)
+    const targetDate = new Date("2024-02-01T12:00:00");
+    const timeDifference = targetDate - now;
+    const days = Math.floor(timeDifference / (1000 * 60 * 60 * 24));
+    const hours = Math.floor((timeDifference % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+    const minutes = Math.floor((timeDifference % (1000 * 60 * 60)) / (1000 * 60));
     }
 
 timer = setInterval (showRemaining, 1000) 
