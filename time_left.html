@@ -50,13 +50,13 @@
             const targetDate = new Date("2024-02-28T12:00:00");
             const timeDifference = targetDate - now;
 
-            const giorni = Math.floor(timeDifference / (1000 * 60 * 60 * 24));
-            const ore = Math.floor((timeDifference % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
-            const minuti = Math.floor((timeDifference % (1000 * 60 * 60)) / (1000 * 60));
+            const days = Math.floor(timeDifference / (1000 * 60 * 60 * 24));
+            const hours = Math.floor((timeDifference % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+            const minutes = Math.floor((timeDifference % (1000 * 60 * 60)) / (1000 * 60));
 
-            document.getElementById("giorni").innerHTML = giorni + " days ";
-            document.getElementById("ore").innerHTML = ore + " hours ";
-            document.getElementById("minuti").innerHTML = minuti + " minutes ";
+            document.getElementById("days").innerHTML = days + " days ";
+            document.getElementById("hours").innerHTML = hours + " hours ";
+            document.getElementById("minutes").innerHTML = minutes + " mins ";
         }
 
         // Chiamare la funzione iniziale
