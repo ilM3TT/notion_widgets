@@ -45,7 +45,7 @@
 
     <script>
         function calculateTimeRemaining() {
-            now = new Date();
+            now = new Date();z
             // Imposta la data obiettivo (esempio: 28 febbraio 2024 alle 12:00:00)
             const targetDate = new Date("2024-02-28T12:00:00");
             const timeDifference = targetDate - now;
@@ -54,9 +54,9 @@
             const ore = Math.floor((timeDifference % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
             const minuti = Math.floor((timeDifference % (1000 * 60 * 60)) / (1000 * 60));
 
-            document.getElementById("giorni").innerHTML = giorni + " giorni ";
-            document.getElementById("ore").innerHTML = ore + " ore ";
-            document.getElementById("minuti").innerHTML = minuti + " minuti ";
+            document.getElementById("giorni").innerHTML = giorni + " days ";
+            document.getElementById("ore").innerHTML = ore + " hours ";
+            document.getElementById("minuti").innerHTML = minuti + " minutes ";
         }
 
         // Chiamare la funzione iniziale
