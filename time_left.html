@@ -1,11 +1,11 @@
 <!DOCTYPE html>
-<html lang="it">
+<html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link href="https://fonts.googleapis.com/css2?family=Fjalla+One&display=swap" rel="stylesheet">
 
-    <title>Fine sessione invernale</title>
+    <title>Countdown to Specific Date</title>
     <style>
         body {
             text-align: center;
@@ -36,27 +36,27 @@
 <body>
     <div id="counter">
         <h2>
-            Fine sessione invernale
+            Time left until Specific Date
         </h2>
-        <h2 class="box" id="giorni"></h2>
-        <h2 class="box" id="ore"></h2>
-        <h2 class="box" id="minuti"></h2>
+        <h2 class="box" id="days"></h2>
+        <h2 class="box" id="hours"></h2>
+        <h2 class="box" id="minutes"></h2>
     </div>
 
     <script>
         function calculateTimeRemaining() {
-            const now = new Date();
-            // Imposta la data obiettivo (esempio: 28 febbraio 2024 alle 12:00:00)
-            const targetDate = new Date("2024-02-28T12:00:00");
+            now = new Date();
+            // Imposta la data obiettivo (esempio: 1 febbraio 2024 alle 12:00:00)
+            const targetDate = new Date("2024-02-01T12:00:00");
             const timeDifference = targetDate - now;
 
-            const giorni = Math.floor(timeDifference / (1000 * 60 * 60 * 24));
-            const ore = Math.floor((timeDifference % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
-            const minuti = Math.floor((timeDifference % (1000 * 60 * 60)) / (1000 * 60));
+            const days = Math.floor(timeDifference / (1000 * 60 * 60 * 24));
+            const hours = Math.floor((timeDifference % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+            const minutes = Math.floor((timeDifference % (1000 * 60 * 60)) / (1000 * 60));
 
-            document.getElementById("giorni").innerHTML = giorni + " giorni ";
-            document.getElementById("ore").innerHTML = ore + " ore ";
-            document.getElementById("minuti").innerHTML = minuti + " minuti ";
+            document.getElementById("days").innerHTML = days + " days ";
+            document.getElementById("hours").innerHTML = hours + " hours ";
+            document.getElementById("minutes").innerHTML = minutes + " mins ";
         }
 
         // Chiamare la funzione iniziale
