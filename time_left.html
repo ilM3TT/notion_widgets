@@ -5,7 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link href="https://fonts.googleapis.com/css2?family=Fjalla+One&display=swap" rel="stylesheet">
 
-    <title>Countdown to Specific Date</title>
+    <title>Tempo rimanente alla sessione invernale</title>
     <style>
         body {
             text-align: center;
@@ -36,7 +36,7 @@
 <body>
     <div id="counter">
         <h2>
-            Time left until Specific Date
+            Tempo rimanente alla sessione invernale
         </h2>
         <h2 class="box" id="days"></h2>
         <h2 class="box" id="hours"></h2>
@@ -54,9 +54,9 @@
             const hours = Math.floor((timeDifference % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
             const minutes = Math.floor((timeDifference % (1000 * 60 * 60)) / (1000 * 60));
 
-            document.getElementById("days").innerHTML = days + " days ";
-            document.getElementById("hours").innerHTML = hours + " hours ";
-            document.getElementById("minutes").innerHTML = minutes + " mins ";
+            document.getElementById("days").innerHTML = days + " giorni ";
+            document.getElementById("hours").innerHTML = hours + " ore ";
+            document.getElementById("minutes").innerHTML = minutes + " minuti ";
         }
 
         // Chiamare la funzione iniziale
