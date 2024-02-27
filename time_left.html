@@ -36,7 +36,7 @@
 <body>
     <div id="counter">
         <h2>
-            Tempo rimanente alla sessione invernale
+            Tempo rimanente all'inizio della sessione estiva
         </h2>
         <h2 class="box" id="days"></h2>
         <h2 class="box" id="hours"></h2>
@@ -47,7 +47,7 @@
         function calculateTimeRemaining() {
             now = new Date();
             // Imposta la data obiettivo (esempio: 24 febbraio 2024 alle 12:00:00)
-            const targetDate = new Date("2024-02-24T12:00:00");
+            const targetDate = new Date("2024-06-05T12:00:00");
             const timeDifference = targetDate - now;
 
             const days = Math.floor(timeDifference / (1000 * 60 * 60 * 24));
